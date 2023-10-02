@@ -173,7 +173,22 @@ main .right img{
     width: 100%;
     object-fit: fill;
 }
-
+#metodo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+#metodo h1{
+    font-size: clamp(10px, 3.2vw, 32px);
+    text-align: center;
+    margin-bottom: 20px;
+}
+#metodo img{
+    width: 80%;
+    margin-bottom: 20px;
+}
 @keyframes btn {
     0%{
         transform: scale(1);
@@ -311,6 +326,9 @@ main .right img{
     main .right img{
         margin: 0;
     }
+        #metodo img {
+            width: 100%;
+        }
 }
 @media(max-width: 650px){
     header{
