@@ -117,25 +117,26 @@
 
             </a>
         </div>
-        <nav>
+        <nav class="nav">
             <ul>
                 <li>
-                    <a href="">QUEM SOMOS NÓS?</a>
+                    <a id="quemLink" href="#quem">QUEM SOMOS NÓS?</a>
                 </li>
                 <li>
-                    <a href="">DEPOIMENTOS</a>
+                    <a id="depoimentosLink" href="#depoimentos">DEPOIMENTOS</a>
                 </li>
                 <li>
-                    <a href="">CONTATOS</a>
+                    <a id="contatosLink" href="#contatos">CONTATOS</a>
                 </li>
             </ul>
         </nav>
+        <button id="btnNavOpen">
+            <div class="traco"></div>
+        </button>
     </header>
-    <main>
+    <main id="quem">
         <div class="left">
-            <h1>
-                DESCUBRA OPORTUNIDADES <span class="green">LUCRATIVAS</span> AO EXPLORAR SUA PAIXÃO PELO <span class="green">FUTEBOL !</span>
-            </h1>
+            <h1>DESCUBRA OPORTUNIDADES <span class="green">LUCRATIVAS</span> AO EXPLORAR SUA PAIXÃO PELO <span class="green">FUTEBOL !</span>   </h1>
             <p>
                 Você não precisa entender de investimentos esportivos, basta apenas copiar e colar os sinais dos nossos especialistas.
             </p>
@@ -147,12 +148,12 @@
             <img src="img/bet365 mockup iphone.avif" alt="" srcset="">
         </div>
     </main>
-    <section class="secao2">
+    <section id="depoimentos" class="secao2">
         <h1>GANHOS DOS MEMBROS DO GRUPO!!</h1>
         <img src="img/ganhos.png" alt="" srcset="">
         <div class="depoiments">
             <h1>DEPOIMENTOS!!</h1>
-                <div class="swiper mySwiper" style="height: 400px; width: 80vw;">
+                <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="content" >
@@ -347,6 +348,7 @@
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
             navigation: {

@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
 :root{
     --white: #fff;
     --black: #000;
@@ -15,6 +19,7 @@
     --green800: #00c26b57;
     --blue: #37aee2;
 }
+
 body{
     background: var(--gray800);
     font-family: 'Oswald', sans-serif;
@@ -49,6 +54,33 @@ header .logo a{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+header #btnNavOpen {
+    display: none;
+    padding: 15px 10px;
+    height: 10px;
+}
+header #btnNavOpen .traco{
+    width: 20px;
+    height: 3px;
+    background: #000;
+    position: relative;
+}
+header #btnNavOpen .traco::after {
+    content: "";
+    display: block;
+    transform: translateY(5px);
+    width: 20px;
+    height: 3px;
+    background: #000;
+}
+header #btnNavOpen .traco::before {
+    content: "";
+    display: block;
+    transform: translateY(-8px);
+    width: 20px;
+    height: 3px;
+    background: #000;
+}
 nav ul {
     display: flex;
     gap: 18px;
@@ -77,7 +109,7 @@ ul li a:hover::after{
     content: "";
     width: 30px;
     height: 2px;
-    background: #FFF;
+    background: currentColor;
     display: block;
     right: 50%;
     left: 50%;
@@ -102,7 +134,7 @@ main .left p{
     border-left: 2px solid var(--green);
     margin-top: 20px;
     font-weight: 100;
-    font-size: clamp(0rem, 1.5vw, 2rem);
+    font-size: clamp(0.5rem, 1.5vw, 2rem);
 }
 main .left button{
     cursor: pointer;
@@ -173,6 +205,8 @@ main .right img{
 }
 .secao2 .depoiments .swiper{
     margin-top: 100px;
+    height: 400px;
+    width: 80vw;
 }
 
 .secao2 .depoiments .swiper-wrapper .swiper-slide{
@@ -233,4 +267,95 @@ main .right img{
     text-decoration: none;
     font-weight: 600;
     color: var(--black);
+}
+@media(max-width: 768px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+    main .left h1{
+        text-align: center;
+        display: flex;
+    }
+    main .left p{
+        margin-left: -30px;
+        text-align: left;
+        padding-left: 9px;
+    }
+    main .left button {
+        
+        margin-top: 30px;
+    }
+    main .right{
+        width: 100vw;
+        display: grid;
+        place-items: center;
+    }
+    main .right img{
+        margin: 0;
+    }
+}
+@media(max-width: 650px){
+    header{
+        position: relative;
+    }
+    header nav{
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        background: var(--white);
+        padding: 1rem;
+        position: absolute;
+        bottom: -100vw;
+        left: 0;
+        z-index: 1;
+        text-align: center;
+    }
+    header nav ul {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li a{
+        color: #000;
+    }
+    header #btnNavOpen{
+        display: block;
+    }
+    .secao2 h1{
+        margin: 0 50px;
+    }
+    .secao2 .depoiments {
+        width: 100vw;
+    }
+    .secao2 .depoiments h1{
+        margin-top: 100px;
+    }
+    .secao2 .depoiments .swiper{
+        width: 100vw;
+    }
+    .secao3 .content{
+        flex-direction: column;
+    }
+    .secao3 .content .contato{
+        width: 80vw;
+    }
+    .secao2 .depoiments .swiper-wrapper .swiper-slide .content{
+            width: 90%;
+    }
+}
+.show {
+    display: flex;
+}
+.scroll{
+    overflow-y: hidden;
 }
