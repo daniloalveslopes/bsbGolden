@@ -123,6 +123,9 @@ main{
 .green{
     color: var(--green);
 }
+main .left{
+    padding-left: 40px;
+}
 main .left h1{
     font-size: clamp(0rem, 4vw, 2rem);
     display: flex;
@@ -145,13 +148,14 @@ main .left button{
     border: none;
     margin-top: 18vh;
     animation: btn 2s  infinite;
-    width: 40%;
+    width: 50%;
 }
 main .left button a{
     font-size: clamp(10px, 3.2vw, 20px);
     color: var(--white);
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
+    
 }
 
 main .right{
@@ -161,7 +165,7 @@ main .right{
     justify-content: center;
 }
 main .right .content{
-    margin-top: 20px;
+    margin-top: -30px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -170,7 +174,7 @@ main .right .content{
 }
 main .right img{
     margin-left: 0%;
-    width: 100%;
+    width: 110%;
     object-fit: fill;
 }
 #metodo {
@@ -205,12 +209,10 @@ main .right img{
     flex-direction: column;
     align-items: center;
 }
-.secao2 h1{
-    font-size: clamp(10px, 3.2vw, 46px);
-    margin-top: 20px;
+.secao2 .depoiments h1{
+    margin-top: 100px;
     margin-bottom: -60px;
     text-align: center;
-    color: var(--white);
 }
 .secao2 img{
     width: 90vw;
@@ -304,6 +306,7 @@ main .right img{
         justify-content: center;
         align-items: center;
         width: 100vw;
+        padding: 0;
     }
     main .left h1{
         text-align: center;
@@ -324,7 +327,9 @@ main .right img{
         place-items: center;
     }
     main .right img{
-        margin: 0;
+        margin-top: 20px;
+        margin-right: 50px;
+
     }
         #metodo img {
             width: 100%;
