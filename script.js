@@ -1,6 +1,7 @@
 let nav = document.querySelector(".nav");
 let header = document.querySelector("header")
 let quemBtn = document.querySelector("#quemLink")
+let metodoBtn = document.querySelector("#metodoLink")
 let depoimentosBtn = document.querySelector("#depoimentosLink")
 let contatosBtn = document.querySelector("#contatosLink")
 let status = false
@@ -22,6 +23,11 @@ depoimentosBtn.addEventListener('click', () => {
     html.classList.toggle('scroll')
 })
 contatosBtn.addEventListener('click', () => {
+    nav.classList.toggle('show');
+    if(header.clientWidth < 650)
+    html.classList.toggle('scroll')
+})
+metodoBtn.addEventListener('click', () => {
     nav.classList.toggle('show');
     if(header.clientWidth < 650)
     html.classList.toggle('scroll')
