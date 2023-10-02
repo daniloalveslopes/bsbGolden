@@ -310,11 +310,11 @@ main .right img{
     header nav{
         display: none;
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
         background: var(--white);
         padding: 1rem;
         position: absolute;
-        bottom: -100vw;
+        top: calc(80px);
         left: 0;
         z-index: 1;
         text-align: center;
