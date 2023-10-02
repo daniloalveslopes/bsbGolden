@@ -12,6 +12,8 @@
     --gray700: #272727;
     --gray800: #1a1919;
     --green: #03ff8d;
+    --green800: #00c26b57;
+    --blue: #37aee2;
 }
 body{
     background: var(--gray800);
@@ -111,9 +113,10 @@ main .left button{
     border: none;
     margin-top: 18vh;
     animation: btn 2s  infinite;
+    width: 40%;
 }
 main .left button a{
-    font-size: 25px;
+    font-size: clamp(10px, 3.2vw, 20px);
     color: var(--white);
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
@@ -171,17 +174,63 @@ main .right img{
 .secao2 .depoiments .swiper{
     margin-top: 100px;
 }
-.secao2 .depoiments .swiper-slide{
-    background: var(--gray700);
-}
+
 .secao2 .depoiments .swiper-wrapper .swiper-slide{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .secao2 .depoiments .swiper-wrapper .swiper-slide .content{
+    background: #172124;
+    padding: 2rem;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 50%;
+}
+.secao2 .depoiments .swiper-wrapper .swiper-slide .content h2{
+    margin-bottom: 30px;
+    margin-right: auto;
+}
+.secao2 .depoiments .swiper-wrapper .swiper-slide .content p{
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+.secao3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+.secao3 .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+.secao3 .content .contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1rem;
+    background: var(--gray700);
+}
+.secao3 .content .contato button{
+    padding: 0.5rem;
+    background: var(--blue);
+    border: none;
+    border-radius: 5px;
+}
+.secao3 .content .contato button a {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--black);
 }
