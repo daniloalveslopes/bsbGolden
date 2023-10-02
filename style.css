@@ -165,12 +165,13 @@ main .right .content{
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    width: 45%;
-    background: #00BF62;
+    width: 50%;
+    /* background: #00BF62; */
 }
 main .right img{
     margin-left: 0%;
-    width: 90%;
+    width: 100%;
+    object-fit: fill;
 }
 
 @keyframes btn {
